@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RideSafe</string>
+    <string name="about">About</string>
+    <string name="about2">About</string>
 </resources>
