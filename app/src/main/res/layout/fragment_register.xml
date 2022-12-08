@@ -4,6 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.ridesafe.register.RegisterFragment">
 
+    <data>
+        <variable
+            name="registerViewModel"
+            type="com.example.ridesafe.register.RegisterViewModel" />
+    </data>
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -22,5 +28,78 @@
             app:layout_constraintHorizontal_bias="0.148"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@id/entryName"
+            style="@style/Widget.RideSafe.TextInputLayout"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_register">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1"
+                android:text="@={registerViewModel.inputName}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@id/entryUsername"
+            style="@style/Widget.RideSafe.TextInputLayout"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Username"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/entryName">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1"
+                android:text="@={registerViewModel.inputUsername}"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/entryPassword"
+            style="@style/Widget.RideSafe.TextInputLayout"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Password"
+            app:endIconMode="password_toggle"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/entryUsername">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:text="@={registerViewModel.inputPassword}"
+                app:layout_constraintTop_toBottomOf="@+id/entryUsername" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegister"
+            style="@style/Widget.RideSafe.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:onClick="@{()->registerViewModel.registerButton()}"
+            android:text="Register"
+            android:textColor="#6D4C41"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/entryPassword" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

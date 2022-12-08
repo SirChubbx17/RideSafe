@@ -12,6 +12,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.example.ridesafe.R
 import com.example.ridesafe.database.UserDatabase
+import com.example.ridesafe.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
     override fun onCreateView(
@@ -33,15 +34,15 @@ class LoginFragment : Fragment() {
 
         val loginViewModel =
             ViewModelProvider(
-                this, viewModelFactory).get(LoginViewModel::class.java)
+                this, viewModelFactory)[LoginViewModel::class.java]
 
-        binding.btnReg.setOnClickListener { view: View ->
-            view.findNavController().navigate(R.id.action_login_to_register3)
+        binding.btnRegister.setOnClickListener { view: View ->
+            view.findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
         }
 
-        LoginViewModel.navigateToHome.observe(viewLifecycleOwner, Observer {
+        loginViewModel.navigateToHome.observe(viewLifecycleOwner, Observer {
             this.findNavController().navigate(
-                R.id.action_login_to_home2)
+                R.id.action_loginFragment_to_homeFragment)
             loginViewModel.doneNavigating()
         })
 
