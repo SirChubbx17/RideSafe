@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">RideSafe</string>
-    <string name="about">About</string>
-    <string name="about2">About</string>
+    <string name="btnLogin">Login</string>
+    <string name="btnRegister">Register</string>
+    <string name="loginPassword">Password</string>
+    <string name="loginUsername">Username</string>
+    <string name="txtView">New here? Click here to sign up!</string>
+    <string name="txtregister">txtRegister</string>
 </resources>

@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.example.ridesafe.AboutFragment">
+    tools:context="com.example.ridesafe.HomeFragment">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -10,12 +10,12 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/txt_about"
+            android:id="@+id/txt_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
             android:fontFamily="sans-serif-condensed-medium"
-            android:text="About"
+            android:text="Home"
             android:textAlignment="textStart"
             android:textSize="34sp"
             app:layout_constraintEnd_toEndOf="parent"
