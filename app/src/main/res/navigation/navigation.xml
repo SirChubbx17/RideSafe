@@ -40,6 +40,12 @@
         <action
             android:id="@+id/action_homeFragment_to_adventureFragment"
             app:destination="@id/adventureFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_historyFragment2"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/adventureFragment"
@@ -58,6 +64,12 @@
         <action
             android:id="@+id/action_aboutFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_aboutFragment_to_FAQFragment"
+            app:destination="@id/FAQFragment" />
+        <action
+            android:id="@+id/action_aboutFragment_to_historyFragment2"
+            app:destination="@id/historyFragment" />
     </fragment>
     <fragment
         android:id="@+id/FAQFragment"
@@ -66,6 +78,15 @@
         tools:layout="@layout/fragment_faq" >
         <action
             android:id="@+id/action_FAQFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.ridesafe.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" >
+        <action
+            android:id="@+id/action_historyFragment2_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
 </navigation>
