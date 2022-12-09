@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.ridesafe.MainActivity">
+
     <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/drawerLayout"
         android:layout_width="match_parent"
@@ -20,6 +21,9 @@
                 app:navGraph = "@navigation/navigation"
                 app:defaultNavHost = "true"
                 tools:layout="@layout/fragment_login" />
+
         </LinearLayout>
+
+
     </androidx.drawerlayout.widget.DrawerLayout>
 </layout>
