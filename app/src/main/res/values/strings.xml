@@ -6,4 +6,11 @@
     <string name="loginUsername">Username</string>
     <string name="txtView">New here? Click here to sign up!</string>
     <string name="txtregister">txtRegister</string>
+    <string name="about">About</string>
+    <string name="developer">Developer</string>
+    <string name="client">Client</string>
+    <string name="introduction">Introduction</string>
+    <string name="client1">Client</string>
+    <string name="developer1">Developer</string>
+    <string name="belen_elijah">Belen, Elijah</string>
 </resources>
