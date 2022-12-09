@@ -6,4 +6,6 @@
     <string name="loginUsername">Username</string>
     <string name="txtView">New here? Click here to sign up!</string>
     <string name="txtregister">txtRegister</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 </resources>
