@@ -8,4 +8,5 @@
 
     <gradient android:startColor="@color/header"
         android:endColor="@color/header"/>
+
 </shape>
