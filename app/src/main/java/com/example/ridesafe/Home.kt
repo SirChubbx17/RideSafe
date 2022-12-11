@@ -6,18 +6,18 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
-import com.example.ridesafe.databinding.FragmentHomeBinding
+import com.example.ridesafe.databinding.RsFragHomeBinding
 
-class HomeFragment : Fragment() {
+class Home : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val binding = DataBindingUtil.inflate<FragmentHomeBinding>(
+        val binding = DataBindingUtil.inflate<RsFragHomeBinding>(
             inflater,
-            R.layout.fragment_home,
+            R.layout.rs_frag_home,
             container,
             false
         )

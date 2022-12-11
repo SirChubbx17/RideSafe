@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.ridesafe.login.LoginFragment"
+        android:name="com.example.ridesafe.login.Login"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        tools:layout="@layout/rs_frag_login" >
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
@@ -21,16 +21,16 @@
         android:id="@+id/registerFragment"
         android:name="com.example.ridesafe.register.RegisterFragment"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" >
+        tools:layout="@layout/rs_frag_register" >
         <action
             android:id="@+id/action_registerFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.ridesafe.HomeFragment"
+        android:name="com.example.ridesafe.Home"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/rs_frag_home" >
         <action
             android:id="@+id/action_homeFragment_to_FAQFragment"
             app:destination="@id/FAQFragment" />
@@ -49,18 +49,18 @@
     </fragment>
     <fragment
         android:id="@+id/adventureFragment"
-        android:name="com.example.ridesafe.adventure.AdventureFragment"
+        android:name="com.example.ridesafe.adventure.AdventureScreen"
         android:label="fragment_adventure"
-        tools:layout="@layout/fragment_adventure" >
+        tools:layout="@layout/rs_frag_adventure" >
         <action
             android:id="@+id/action_adventureFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
-        android:name="com.example.ridesafe.AboutFragment"
+        android:name="com.example.ridesafe.About"
         android:label="fragment_about"
-        tools:layout="@layout/fragment_about" >
+        tools:layout="@layout/rs_frag_about" >
         <action
             android:id="@+id/action_aboutFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
@@ -75,16 +75,16 @@
         android:id="@+id/FAQFragment"
         android:name="com.example.ridesafe.FAQFragment"
         android:label="fragment_faq"
-        tools:layout="@layout/fragment_faq" >
+        tools:layout="@layout/rs_frag_faq" >
         <action
             android:id="@+id/action_FAQFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/historyFragment"
-        android:name="com.example.ridesafe.HistoryFragment"
+        android:name="com.example.ridesafe.History"
         android:label="fragment_history"
-        tools:layout="@layout/fragment_history" >
+        tools:layout="@layout/rs_frag_history" >
         <action
             android:id="@+id/action_historyFragment2_to_homeFragment"
             app:destination="@id/homeFragment" />

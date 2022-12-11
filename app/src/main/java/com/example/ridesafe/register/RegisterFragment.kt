@@ -12,7 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.ridesafe.R
 import com.example.ridesafe.database.UserDatabase
-import com.example.ridesafe.databinding.FragmentRegisterBinding
+import com.example.ridesafe.databinding.RsFragRegisterBinding
 
 
 class RegisterFragment : Fragment() {
@@ -21,9 +21,9 @@ class RegisterFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = DataBindingUtil.inflate<FragmentRegisterBinding>(
+        val binding = DataBindingUtil.inflate<RsFragRegisterBinding>(
             inflater,
-            R.layout.fragment_register,
+            R.layout.rs_frag_register,
             container,
             false
         )
