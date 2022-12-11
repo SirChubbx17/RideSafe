@@ -3,46 +3,69 @@ package com.example.ridesafe
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
-import android.widget.RelativeLayout
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 
-class FAQAdapter(val faqList: List<FAQFragment>) :
-        RecyclerView.Adapter<FAQAdapter.FAQVH>(){
-    class FAQVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
+class FAQAdapter(private var faqList: List<FAQData>) :
+        RecyclerView.Adapter<FAQAdapter.FAQViewHolder>(){
+
+    inner class FAQViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         var questionTxt : TextView = itemView.findViewById(R.id.faq)
         var contentTxt : TextView = itemView.findViewById(R.id.faq_content)
-        var linearLayout : LinearLayout = itemView.findViewById(R.id.linearLayout)
-        var expandableLayout : RelativeLayout = itemView.findViewById(R.id.expandable_layout)
+        var constraintLayout : ConstraintLayout = itemView.findViewById(R.id.constraintLayout)
+
+        fun collapseExpandedView(){
+            contentTxt.visibility = View.GONE
+        }
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FAQViewHolder {
+        val view =
+            LayoutInflater.from(parent.context).inflate(R.layout.rs_frag_faqrow, parent, false)
+        return FAQViewHolder(view)
 
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FAQVH {
-        val view : View = LayoutInflater.from(parent.context).inflate(R.layout.rs_frag_faqrow, parent, false)
+    override fun onBindViewHolder(holder: FAQViewHolder, position: Int) {
+        val faqData = faqList[position]
+        holder.questionTxt.text = faqData.question
+        holder.contentTxt.text = faqData.content
 
-        return FAQVH(view)
+        val isExpandable: Boolean = faqData.isExpandable
+        holder.contentTxt.visibility = if (isExpandable) View.VISIBLE else View.GONE
+
+        holder.constraintLayout.setOnClickListener {
+            isAnyItemExpanded(position)
+            faqData.isExpandable = !faqData.isExpandable
+            notifyItemChanged(position, Unit)
+        }
+    }
+
+    private fun isAnyItemExpanded(position: Int) {
+        val temp = faqList.indexOfFirst {
+            it.isExpandable
+        }
+        if (temp >=0 && temp != position){
+            faqList[temp].isExpandable = false
+            notifyItemChanged(temp, 0)
+        }
+    }
+
+    override fun onBindViewHolder(
+        holder: FAQViewHolder,
+        position: Int,
+        payloads: MutableList<Any>
+    ) {
+        if(payloads.isNotEmpty() && payloads[0] == 0){
+            holder.collapseExpandedView()
+        }else{
+            super.onBindViewHolder(holder, position, payloads)
+        }
     }
 
     override fun getItemCount(): Int {
         return faqList.size
     }
-
-    override fun onBindViewHolder(holder: FAQVH, position: Int) {
-
-        val faqs : FAQFragment = faqList[position]
-        holder.questionTxt.text = faqs.question
-        holder.contentTxt.text = faqs.content
-
-        val isExpandable : Boolean = faqList[position].expandable
-        holder.expandableLayout.visibility = if (isExpandable) View.VISIBLE else View.GONE
-
-        holder.linearLayout.setOnClickListener{
-            val faqs = faqList[position]
-            faqs.expandable = !faqs.expandable
-            notifyItemChanged(position)
-        }
-    }
-
 }
