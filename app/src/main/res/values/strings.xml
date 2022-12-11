@@ -15,4 +15,5 @@
     <string name="client1">Client</string>
     <string name="developer1">Developer</string>
     <string name="belen_elijah">Belen, Elijah</string>
+    <string name="error_password">Password must contain at least 8 characters.</string>
 </resources>

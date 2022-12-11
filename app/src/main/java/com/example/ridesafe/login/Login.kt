@@ -43,7 +43,7 @@ class Login : Fragment() {
 
         loginViewModel.navigateToHome.observe(viewLifecycleOwner, Observer {
             if (!isPasswordValid(binding.passwordEditText.text!!)) {
-                binding.loginPassword.error = "AAAA"
+                binding.loginPassword.error = getString(R.string.error_password)
             } else {
                 // Clear the error.
                 binding.loginPassword.error = null

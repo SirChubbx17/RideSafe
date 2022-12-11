@@ -22,16 +22,6 @@ class Home : Fragment() {
             false
         )
 
-        binding.bottomNav.setOnItemSelectedListener {
-
-            when (it.itemId) {
-                R.id.homeId -> {replaceFragment(Home(), it.title.toString())}
-                R.id.historyId -> {replaceFragment(History(), it.title.toString())}
-                //R.id.help -> { replaceFragment(FAQFragment(), it.title.toString()) }
-            }
-            true
-        }
-
         setHasOptionsMenu(true)
         return binding.root
 
@@ -45,13 +35,6 @@ class Home : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return NavigationUI.onNavDestinationSelected(item,requireView().findNavController())
                 || super.onOptionsItemSelected(item)
-    }
-
-    private fun replaceFragment(fragment: Fragment, title: String){
-        val fragmentManager = childFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frameLayout,fragment)
-        fragmentTransaction.commit()
     }
 
 }
