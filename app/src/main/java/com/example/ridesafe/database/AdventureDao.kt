@@ -7,8 +7,8 @@ interface AdventureDao {
     @Query("SELECT * FROM adventure_table")
     fun getAll(): List<Adventure>
 
-    @Query("SELECT * FROM adventure_table WHERE `Adventure ID` LIKE :adventureid LIMIT 1")
-    suspend fun findByRoute(adventureid: Int): Adventure
+    @Query("SELECT * FROM adventure_table WHERE id LIKE :id LIMIT 1")
+    suspend fun findByRoute(id: Int): Adventure
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(storage: Adventure)
@@ -19,9 +19,9 @@ interface AdventureDao {
     @Query("DELETE FROM adventure_table")
     suspend fun deleteAll()
 
-    @Query("UPDATE adventure_table SET `Total Distance`=:totaldistance,`Time Travelled`=:timetravelled WHERE `Adventure ID` LIKE :adventureid")
-    suspend fun update(totaldistance : Int, timetravelled : Int, adventureid : Int)
+    @Query("UPDATE adventure_table SET `Total Distance`=:totaldistance,`Time Travelled`=:timetravelled WHERE id LIKE :id")
+    suspend fun update(totaldistance : Int, timetravelled : Int, id : Int)
 
-    @Query("DELETE FROM adventure_table WHERE `Adventure ID` LIKE :adventureid")
-    suspend fun delete(adventureid: Int)
+    @Query("DELETE FROM adventure_table WHERE id LIKE :id")
+    suspend fun delete(id: Int)
 }
