@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.ridesafe.MainActivity">
+
     <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/drawerLayout"
         android:layout_width="match_parent"
@@ -12,14 +13,23 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <androidx.fragment.app.FragmentContainerView
+            <fragment
                 android:id="@+id/myNavHostFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:name = "androidx.navigation.fragment.NavHostFragment"
                 app:navGraph = "@navigation/navigation"
                 app:defaultNavHost = "true"
-                tools:layout="@layout/fragment_login" />
+                tools:layout="@layout/rs_frag_login" />
         </LinearLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/navView"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/nav_drawer"/>
+
     </androidx.drawerlayout.widget.DrawerLayout>
 </layout>

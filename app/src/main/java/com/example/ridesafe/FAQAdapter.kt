@@ -20,7 +20,7 @@ class FAQAdapter(val faqList: List<FAQFragment>) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FAQVH {
-        val view : View = LayoutInflater.from(parent.context).inflate(R.layout.fragment_faqrow, parent, false)
+        val view : View = LayoutInflater.from(parent.context).inflate(R.layout.rs_frag_faqrow, parent, false)
 
         return FAQVH(view)
     }

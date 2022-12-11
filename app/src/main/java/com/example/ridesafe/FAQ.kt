@@ -9,7 +9,7 @@ class FAQ : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_faq)
+        setContentView(R.layout.rs_frag_faq)
 
         initData()
         setRecyclerView()

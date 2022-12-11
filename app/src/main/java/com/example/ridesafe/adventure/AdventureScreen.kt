@@ -7,14 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.ridesafe.R
 
-class AdventureFragment : Fragment() {
+class AdventureScreen : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_adventure, container, false)
+        return inflater.inflate(R.layout.rs_frag_adventure, container, false)
     }
 
 }

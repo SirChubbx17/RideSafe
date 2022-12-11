@@ -5,6 +5,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.example.ridesafe.R
 import com.example.ridesafe.database.UserDao
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -30,7 +31,7 @@ class LoginViewModel (val database: UserDao,
 
     fun loginButton() {
         if (inputUsername.value == null || inputPassword.value == null) {
-//            error handling
+            //R.id.username_edit_text.setError = "TEST"
         } else {
             CoroutineScope(Dispatchers.IO).launch {
                 val usersNames = database.login(inputUsername.value!!)
