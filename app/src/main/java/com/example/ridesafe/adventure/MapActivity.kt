@@ -1,4 +1,4 @@
-//package com.example.ridesafe.adventure
+package com.example.ridesafe.adventure
 //
 //import android.R
 //import android.os.Bundle
@@ -10,7 +10,8 @@
 //import com.google.android.gms.maps.model.MarkerOptions
 //
 //// Implement OnMapReadyCallback.
-//class MapActivity : AppCompatActivity(), OnMapReadyCallback {
+class MapActivity{}
+// : AppCompatActivity(), OnMapReadyCallback {
 //    override fun onCreate(savedInstanceState: Bundle?) {
 //        super.onCreate(savedInstanceState)
 //        // Set the layout file as the content view.
