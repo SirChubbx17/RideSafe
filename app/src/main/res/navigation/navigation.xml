@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.example.ridesafe.register.RegisterFragment"
+        android:name="com.example.ridesafe.register.Register"
         android:label="fragment_register"
         tools:layout="@layout/rs_frag_register" >
         <action

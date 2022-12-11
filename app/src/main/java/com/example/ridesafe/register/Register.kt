@@ -15,7 +15,7 @@ import com.example.ridesafe.database.UserDatabase
 import com.example.ridesafe.databinding.RsFragRegisterBinding
 
 
-class RegisterFragment : Fragment() {
+class Register : Fragment() {
     @SuppressLint("FragmentLiveDataObserve")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
