@@ -21,6 +21,9 @@ class Home : Fragment() {
             container,
             false
         )
+        binding.btnStart.setOnClickListener { view: View ->
+            view.findNavController().navigate(R.id.action_homeFragment_to_adventureFragment)
+        }
 
         binding.bottomNav.setOnItemSelectedListener {
 
