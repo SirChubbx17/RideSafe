@@ -15,4 +15,6 @@
     <string name="client1">Client</string>
     <string name="developer1">Developer</string>
     <string name="belen_elijah">Belen, Elijah</string>
+    <string name="question">Question</string>
+    <string name="content">Content</string>
 </resources>
