@@ -73,11 +73,11 @@
     </fragment>
     <fragment
         android:id="@+id/FAQFragment"
-        android:name="com.example.ridesafe.FAQFragment"
+        android:name="com.example.ridesafe.FAQ"
         android:label="fragment_faq"
         tools:layout="@layout/rs_frag_faq" >
         <action
-            android:id="@+id/action_FAQFragment_to_homeFragment"
+            android:id="@+id/action_FAQ_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
     <fragment

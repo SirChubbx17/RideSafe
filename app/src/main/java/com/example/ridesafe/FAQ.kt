@@ -32,5 +32,11 @@ class FAQ : AppCompatActivity() {
             "Lorem ipsum blah blah blah"
             )
         )
+        faqList.add(
+            FAQData(
+                "What is ridesafe?",
+                "Lorem ipsum blah blah blah"
+            )
+        )
     }
 }
